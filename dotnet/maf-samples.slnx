@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+<Folder Name="/samples/01-getting-started/">
+    <Project Path="samples/01-getting-started/GettingStarted.csproj" />
+  </Folder>
+  <Folder Name="/samples/02-agent-middleware/">
+    <Project Path="samples/02-agent-middleware/AgentMiddleware.csproj" />
+  </Folder>
+</Solution>
