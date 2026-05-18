@@ -9,4 +9,7 @@
   <Folder Name="/samples/02-agent-middleware/">
     <Project Path="samples/02-agent-middleware/AgentMiddleware.csproj" />
   </Folder>
+  <Folder Name="/samples/03-durable-functions/">
+    <Project Path="samples/03-durable-functions/DurableFunctions.csproj" />
+  </Folder>
 </Solution>
