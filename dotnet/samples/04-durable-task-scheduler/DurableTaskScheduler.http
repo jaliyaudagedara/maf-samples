@@ -1,0 +1,19 @@
+@host = http://localhost:7099
+@agent = weekend-planner
+
+### Start a new conversation (note the x-ms-thread-id response header)
+POST {{host}}/api/agents/{{agent}}/run
+Content-Type: application/json
+
+{
+  "message": "What should I do this weekend in Auckland?"
+}
+
+### Continue the same thread — paste the x-ms-thread-id value below
+# @name continueThread
+POST {{host}}/api/agents/{{agent}}/run?thread_id=945d4230-97cc-4342-8e71-449c48e07a65
+Content-Type: application/json
+
+{
+  "message": "What is the weather like there?"
+}

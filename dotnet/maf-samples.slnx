@@ -12,4 +12,7 @@
   <Folder Name="/samples/03-durable-functions/">
     <Project Path="samples/03-durable-functions/DurableFunctions.csproj" />
   </Folder>
+  <Folder Name="/samples/04-durable-task-scheduler/">
+    <Project Path="samples/04-durable-task-scheduler/DurableTaskScheduler.csproj" />
+  </Folder>
 </Solution>
