@@ -1,0 +1,9 @@
+@host = http://localhost:7100
+
+### Kick off a weekend planning orchestration — response is 202 with statusQueryGetUri to poll for completion
+POST {{host}}/api/weekend-plan
+Content-Type: application/json
+
+{
+  "city": "Auckland"
+}
