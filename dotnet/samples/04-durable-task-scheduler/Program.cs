@@ -2,9 +2,7 @@ using Azure.AI.Projects;
 using Azure.Identity;
 using Microsoft.Agents.AI;
 using Microsoft.Agents.AI.Hosting.AzureFunctions;
-using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Builder;
-using Microsoft.DurableTask;
 using Microsoft.Extensions.AI;
 using Microsoft.Extensions.Hosting;
 using System.ComponentModel;
@@ -84,16 +82,3 @@ static string GetCurrentDate()
 record WeatherResult(int Temperature, string Description);
 
 record LeisureActivity(string Name, string Location);
-
-// ============================================================================
-// Dummy orchestrator to satisfy Durable Functions requirement of having at least one orchestration in the assembly.
-// ============================================================================
-public static class DummyOrchestrator
-{
-    [Function(nameof(DummyOrchestrator))]
-    public static Task RunOrchestrator(
-        [OrchestrationTrigger] TaskOrchestrationContext context)
-    {
-        return Task.CompletedTask;
-    }
-}
