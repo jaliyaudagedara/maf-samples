@@ -3,6 +3,6 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="Microsoft.Agents.AI.Foundry" Version="1.6.2-preview.260521.1" />
+    <PackageVersion Include="Microsoft.Agents.AI.Foundry" Version="1.22.0-preview.260918.1" />
   </ItemGroup>
 </Project>
