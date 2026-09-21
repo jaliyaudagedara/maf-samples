@@ -2,6 +2,8 @@
   <Folder Name="/Solution Items/">
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
+  <File Path="temp.jsonc" />
+  <File Path="temp.ps1" />
   </Folder>
 <Folder Name="/samples/" />
 <Folder Name="/samples/01-getting-started/">
@@ -23,6 +25,7 @@
   <Project Path="samples/06-prompt-agent/PromptAgent.csproj" />
   </Folder>
   <Folder Name="/samples/07-hosted-agent/">
-  <Project Path="samples/07-hosted-agent/HostedAgent.csproj" />
+  <Project Path="samples/07-hosted-agent/HostedAgent/HostedAgent.csproj" />
+  <Project Path="samples/07-hosted-agent/HostedAgent.Client/HostedAgent.Client.csproj" />
   </Folder>
 </Solution>
