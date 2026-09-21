@@ -18,4 +18,7 @@
   <Folder Name="/samples/05-durable-orchestrator/">
     <Project Path="samples/05-durable-orchestrator/DurableOrchestrator.csproj" />
   </Folder>
+  <Folder Name="/samples/06-prompt-agent/">
+    <Project Path="samples/06-prompt-agent/PromptAgent.csproj" />
+  </Folder>
 </Solution>
