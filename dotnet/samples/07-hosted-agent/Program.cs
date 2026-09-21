@@ -29,11 +29,11 @@ AIAgent agent = new AIProjectClient(new Uri(endpoint), credential)
         ]);
 
 // Serve the agent over the Responses protocol, on port 8088 by default
-var builder = AgentHost.CreateBuilder(args);
+AgentHostBuilder builder = AgentHost.CreateBuilder(args);
 builder.Services.AddFoundryResponses(agent);
 builder.RegisterProtocol("responses", endpoints => endpoints.MapFoundryResponses());
 
-var app = builder.Build();
+AgentHostApp app = builder.Build();
 app.Run();
 
 // ============================================================================
