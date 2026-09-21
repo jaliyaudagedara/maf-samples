@@ -1,0 +1,30 @@
+@host = http://localhost:8088
+@agent = weekend-planner
+
+# For the deployed agent, get a token with:
+# az account get-access-token --scope https://ai.azure.com/.default --query accessToken --output tsv
+@endpoint = https://<resource>.services.ai.azure.com/api/projects/<project>
+@token = <token>
+
+### Invoke the agent running locally
+POST {{host}}/responses
+Content-Type: application/json
+
+{
+  "input": "What should I do this weekend in Auckland?",
+  "stream": false
+}
+
+### Invoke the deployed agent
+POST {{endpoint}}/agents/{{agent}}/endpoint/protocols/openai/responses?api-version=v1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "input": "What should I do this weekend in Auckland?",
+  "stream": false
+}
+
+### Delete the agent, its versions, and any active sessions
+DELETE {{endpoint}}/agents/{{agent}}?api-version=v1&force=true
+Authorization: Bearer {{token}}

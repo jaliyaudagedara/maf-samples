@@ -3,22 +3,26 @@
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
   </Folder>
+<Folder Name="/samples/" />
 <Folder Name="/samples/01-getting-started/">
-    <Project Path="samples/01-getting-started/GettingStarted.csproj" />
-  </Folder>
+<Project Path="samples/01-getting-started/GettingStarted.csproj" />
+</Folder>
   <Folder Name="/samples/02-agent-middleware/">
-    <Project Path="samples/02-agent-middleware/AgentMiddleware.csproj" />
+  <Project Path="samples/02-agent-middleware/AgentMiddleware.csproj" />
   </Folder>
   <Folder Name="/samples/03-durable-functions/">
-    <Project Path="samples/03-durable-functions/DurableFunctions.csproj" />
+  <Project Path="samples/03-durable-functions/DurableFunctions.csproj" />
   </Folder>
   <Folder Name="/samples/04-durable-task-scheduler/">
-    <Project Path="samples/04-durable-task-scheduler/DurableTaskScheduler.csproj" />
+  <Project Path="samples/04-durable-task-scheduler/DurableTaskScheduler.csproj" />
   </Folder>
   <Folder Name="/samples/05-durable-orchestrator/">
-    <Project Path="samples/05-durable-orchestrator/DurableOrchestrator.csproj" />
+  <Project Path="samples/05-durable-orchestrator/DurableOrchestrator.csproj" />
   </Folder>
   <Folder Name="/samples/06-prompt-agent/">
-    <Project Path="samples/06-prompt-agent/PromptAgent.csproj" />
+  <Project Path="samples/06-prompt-agent/PromptAgent.csproj" />
+  </Folder>
+  <Folder Name="/samples/07-hosted-agent/">
+  <Project Path="samples/07-hosted-agent/HostedAgent.csproj" />
   </Folder>
 </Solution>
