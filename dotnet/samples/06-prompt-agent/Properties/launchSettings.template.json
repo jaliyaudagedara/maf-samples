@@ -4,7 +4,8 @@
       "commandName": "Project",
       "environmentVariables": {
         "AZURE_AI_PROJECT_ENDPOINT": "https://<resource>.services.ai.azure.com/api/projects/<project>",
-        "AZURE_AI_MODEL": "<model-deployment-name>"
+        "AZURE_AI_MODEL": "<model-deployment-name>",
+        "AZURE_TOKEN_CREDENTIALS": "dev"
       }
     }
   }

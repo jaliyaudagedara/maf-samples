@@ -3,7 +3,8 @@
     "HostedAgent.Client": {
       "commandName": "Project",
       "environmentVariables": {
-        "AZURE_AI_PROJECT_ENDPOINT": "https://<resource>.services.ai.azure.com/api/projects/<project>"
+        "AZURE_AI_PROJECT_ENDPOINT": "https://<resource>.services.ai.azure.com/api/projects/<project>",
+        "AZURE_TOKEN_CREDENTIALS": "dev"
       }
     }
   }
