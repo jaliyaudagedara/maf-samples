@@ -31,4 +31,7 @@
   <Folder Name="/samples/08-handoff/">
   <Project Path="samples/08-handoff/HandoffAgents.csproj" />
   </Folder>
+  <Folder Name="/samples/09-hosted-handoff/">
+  <Project Path="samples/09-hosted-handoff/HostedHandoff.csproj" />
+  </Folder>
 </Solution>

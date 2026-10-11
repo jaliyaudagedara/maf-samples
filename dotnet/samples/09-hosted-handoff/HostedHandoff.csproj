@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <!-- Foundry hosted agents run on the dotnet_10 runtime -->
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>MafSamples.HostedHandoff</RootNamespace>
+    <!-- Code deploy uploads only this folder, so Directory.Packages.props is not available -->
+    <ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>
+    <UserSecretsId>9e40e844-a52d-4f89-8db9-27cd75d53965</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Agents.AI.Foundry.Hosting" Version="1.24.0-preview.261006.1" />
+  </ItemGroup>
+
+</Project>

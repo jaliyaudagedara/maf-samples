@@ -1,0 +1,20 @@
+@agent = weekend-concierge
+
+# For the deployed agent, get a token with:
+# az account get-access-token --scope https://ai.azure.com/.default --query accessToken --output tsv
+@endpoint = https://<resource>.services.ai.azure.com/api/projects/<project>
+@token = <paste the token here>
+
+### Invoke the deployed agent, the output array shows each agent that ran
+POST {{endpoint}}/agents/{{agent}}/endpoint/protocols/openai/responses?api-version=v1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "input": "Where can we eat in Auckland this weekend?",
+  "stream": false
+}
+
+### Delete the agent, its versions, and any active sessions
+DELETE {{endpoint}}/agents/{{agent}}?api-version=v1&force=true
+Authorization: Bearer {{token}}
