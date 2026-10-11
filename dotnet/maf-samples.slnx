@@ -32,4 +32,8 @@
   <Folder Name="/samples/09-hosted-handoff/">
   <Project Path="samples/09-hosted-handoff/HostedHandoff.csproj" />
   </Folder>
+  <Folder Name="/samples/10-human-in-the-loop/">
+  <Project Path="samples/10-human-in-the-loop/HumanInTheLoop.Console/HumanInTheLoop.Console.csproj" />
+  <Project Path="samples/10-human-in-the-loop/HumanInTheLoop/HumanInTheLoop.csproj" />
+  </Folder>
 </Solution>

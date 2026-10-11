@@ -15,4 +15,4 @@ Samples for [Microsoft Agent Framework](https://github.com/microsoft/agent-frame
 | 7 | [Hosted Agent](dotnet/samples/07-hosted-agent/) | Deploy the agent to Foundry, so it runs there behind its own endpoint | [Microsoft Agent Framework: Hosted Agents in Microsoft Foundry with .NET](https://jaliyaudagedara.blogspot.com/2026/09/microsoft-agent-framework-hosted-agents.html) |
 | 8 | [Handoff](dotnet/samples/08-handoff/) | Let two agents decide between themselves who answers next | [Microsoft Agent Framework: Handoff Orchestration with .NET](https://jaliyaudagedara.blogspot.com/2026/10/microsoft-agent-framework-handoff.html) |
 | 9 | [Hosted Handoff](dotnet/samples/09-hosted-handoff/) | Host the handoff workflow in Foundry as a single agent | [Microsoft Agent Framework: Hosting a Handoff Workflow in Microsoft Foundry with .NET](https://jaliyaudagedara.blogspot.com/2026/10/microsoft-agent-framework-hosting.html) |
-
+| 10 | [Human in the Loop](dotnet/samples/10-human-in-the-loop/) | Pause a hosted agent for approval before it runs a tool | |

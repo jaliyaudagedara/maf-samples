@@ -1,0 +1,94 @@
+@host = http://localhost:8088
+@agent = weekend-concierge-approval
+
+# For the deployed agent, get a token with:
+# az account get-access-token --scope https://ai.azure.com/.default --query accessToken --output tsv
+@endpoint = https://<resource>.services.ai.azure.com/api/projects/<project>
+@token = <paste the token here>
+
+### 1. Ask for a booking. Dining usually asks for the city and date first
+POST {{host}}/responses
+Content-Type: application/json
+
+{
+  "input": "Book The Domain Kitchen for 2 people at 7pm on Saturday.",
+  "stream": false
+}
+
+### 2. Answer it. This response carries the mcp_approval_request items (two of them, for one tool call)
+POST {{host}}/responses
+Content-Type: application/json
+
+{
+  "previous_response_id": "<the caresp_... id of the response above>",
+  "stream": false,
+  "input": "Auckland, and the date is 2026-09-26."
+}
+
+### 3. Approve. previous_response_id is the caresp_... id, approval_request_id is the mcpr_... item id
+POST {{host}}/responses
+Content-Type: application/json
+
+{
+  "previous_response_id": "<the caresp_... id of the response above>",
+  "stream": false,
+  "input": [
+    {
+      "type": "mcp_approval_response",
+      "approval_request_id": "<first mcpr_... id>",
+      "approve": true
+    },
+    {
+      "type": "mcp_approval_response",
+      "approval_request_id": "<second mcpr_... id>",
+      "approve": true
+    }
+  ]
+}
+
+### 4. Deployed: ask for a booking
+POST {{endpoint}}/agents/{{agent}}/endpoint/protocols/openai/responses?api-version=v1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "input": "Book The Domain Kitchen for 2 people at 7pm on Saturday.",
+  "stream": false
+}
+
+### 5. Deployed: answer the city and date, this response carries the mcp_approval_request items
+POST {{endpoint}}/agents/{{agent}}/endpoint/protocols/openai/responses?api-version=v1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "previous_response_id": "<the caresp_... id of the response above>",
+  "stream": false,
+  "input": "Auckland, and the date is 2026-09-26."
+}
+
+### 6. Deployed: approve. Returns HTTP 200 with "status": "failed", and the booking still happens
+POST {{endpoint}}/agents/{{agent}}/endpoint/protocols/openai/responses?api-version=v1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "previous_response_id": "<the caresp_... id of the response above>",
+  "stream": false,
+  "input": [
+    {
+      "type": "mcp_approval_response",
+      "approval_request_id": "<first mcpr_... id>",
+      "approve": true
+    },
+    {
+      "type": "mcp_approval_response",
+      "approval_request_id": "<second mcpr_... id>",
+      "approve": true
+    }
+  ]
+}
+
+### Delete the agent, its versions, and any active sessions
+DELETE {{endpoint}}/agents/{{agent}}?api-version=v1&force=true
+Authorization: Bearer {{token}}
