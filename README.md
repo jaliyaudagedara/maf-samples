@@ -13,4 +13,5 @@ Samples for [Microsoft Agent Framework](https://github.com/microsoft/agent-frame
 | 5 | [Durable Orchestrator](dotnet/samples/05-durable-orchestrator/) | Coordinate multiple agents deterministically from a Durable Functions orchestrator | [Microsoft Agent Framework: Deterministic Multi-Agent Orchestrations with .NET Durable Functions](https://jaliyaudagedara.blogspot.com/2026/05/microsoft-agent-framework-deterministic.html) |
 | 6 | [Prompt Agent](dotnet/samples/06-prompt-agent/) | Create a versioned prompt agent in Foundry and run it, with the tools running in your app | [Microsoft Agent Framework: Prompt Agents in Microsoft Foundry with .NET](https://jaliyaudagedara.blogspot.com/2026/09/microsoft-agent-framework-prompt-agents.html) |
 | 7 | [Hosted Agent](dotnet/samples/07-hosted-agent/) | Deploy the agent to Foundry, so it runs there behind its own endpoint | [Microsoft Agent Framework: Hosted Agents in Microsoft Foundry with .NET](https://jaliyaudagedara.blogspot.com/2026/09/microsoft-agent-framework-hosted-agents.html) |
+| 8 | [Handoff](dotnet/samples/08-handoff/) | Let two agents decide between themselves who answers next | |
 

@@ -28,4 +28,7 @@
   <Project Path="samples/07-hosted-agent/HostedAgent/HostedAgent.csproj" />
   <Project Path="samples/07-hosted-agent/HostedAgent.Client/HostedAgent.Client.csproj" />
   </Folder>
+  <Folder Name="/samples/08-handoff/">
+  <Project Path="samples/08-handoff/HandoffAgents.csproj" />
+  </Folder>
 </Solution>

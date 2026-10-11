@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Agents.AI.Foundry" />
+    <PackageReference Include="Microsoft.Agents.AI.Workflows" />
+  </ItemGroup>
+
+</Project>
