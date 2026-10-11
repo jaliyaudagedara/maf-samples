@@ -14,5 +14,5 @@ Samples for [Microsoft Agent Framework](https://github.com/microsoft/agent-frame
 | 6 | [Prompt Agent](dotnet/samples/06-prompt-agent/) | Create a versioned prompt agent in Foundry and run it, with the tools running in your app | [Microsoft Agent Framework: Prompt Agents in Microsoft Foundry with .NET](https://jaliyaudagedara.blogspot.com/2026/09/microsoft-agent-framework-prompt-agents.html) |
 | 7 | [Hosted Agent](dotnet/samples/07-hosted-agent/) | Deploy the agent to Foundry, so it runs there behind its own endpoint | [Microsoft Agent Framework: Hosted Agents in Microsoft Foundry with .NET](https://jaliyaudagedara.blogspot.com/2026/09/microsoft-agent-framework-hosted-agents.html) |
 | 8 | [Handoff](dotnet/samples/08-handoff/) | Let two agents decide between themselves who answers next | [Microsoft Agent Framework: Handoff Orchestration with .NET](https://jaliyaudagedara.blogspot.com/2026/10/microsoft-agent-framework-handoff.html) |
-| 9 | [Hosted Handoff](dotnet/samples/09-hosted-handoff/) | Host the handoff workflow in Foundry as a single agent | |
+| 9 | [Hosted Handoff](dotnet/samples/09-hosted-handoff/) | Host the handoff workflow in Foundry as a single agent | [Microsoft Agent Framework: Hosting a Handoff Workflow in Microsoft Foundry with .NET](https://jaliyaudagedara.blogspot.com/2026/10/microsoft-agent-framework-hosting.html) |
 

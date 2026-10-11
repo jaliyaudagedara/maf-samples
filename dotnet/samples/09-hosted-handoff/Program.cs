@@ -1,4 +1,3 @@
-using Azure.AI.AgentServer.Core;
 using Azure.AI.Projects;
 using Azure.Identity;
 using Microsoft.Agents.AI;
