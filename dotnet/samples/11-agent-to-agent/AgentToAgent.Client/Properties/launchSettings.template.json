@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "AgentToAgent.Client": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "A2A_AGENT_URL": "http://localhost:5000"
+      }
+    }
+  }
+}

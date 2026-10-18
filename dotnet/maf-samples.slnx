@@ -36,4 +36,8 @@
   <Project Path="samples/10-human-in-the-loop/HumanInTheLoop.Console/HumanInTheLoop.Console.csproj" />
   <Project Path="samples/10-human-in-the-loop/HumanInTheLoop/HumanInTheLoop.csproj" />
   </Folder>
+  <Folder Name="/samples/11-agent-to-agent/">
+  <Project Path="samples/11-agent-to-agent/AgentToAgent.Client/AgentToAgent.Client.csproj" />
+  <Project Path="samples/11-agent-to-agent/AgentToAgent/AgentToAgent.csproj" />
+  </Folder>
 </Solution>

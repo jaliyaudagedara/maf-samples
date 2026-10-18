@@ -1,0 +1,26 @@
+@host = http://localhost:5000
+
+### 1. Discover the agent
+GET {{host}}/.well-known/agent-card.json
+
+### 2. Send it a message over JSON-RPC
+POST {{host}}/
+Content-Type: application/json
+A2A-Version: 1.0
+
+{
+  "jsonrpc": "2.0",
+  "id": "1",
+  "method": "SendMessage",
+  "params": {
+    "message": {
+      "messageId": "1",
+      "role": "ROLE_USER",
+      "parts": [
+        {
+          "text": "What should I do this weekend in Auckland?"
+        }
+      ]
+    }
+  }
+}

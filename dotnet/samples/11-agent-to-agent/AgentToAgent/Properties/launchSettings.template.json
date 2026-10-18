@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "AgentToAgent": {
+      "commandName": "Project",
+      "applicationUrl": "http://localhost:5000",
+      "environmentVariables": {
+        "AZURE_AI_ENDPOINT": "https://<resource>.services.ai.azure.com/",
+        "AZURE_AI_MODEL": "<model-deployment-name>",
+        "AZURE_TOKEN_CREDENTIALS": "dev"
+      }
+    }
+  }
+}
