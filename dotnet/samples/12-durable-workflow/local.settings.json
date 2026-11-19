@@ -1,0 +1,11 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+    "DTS_CONNECTION_STRING": "Endpoint=http://localhost:8080;Authentication=None",
+    "TASKHUB_NAME": "default",
+    "AZURE_AI_ENDPOINT": "<AZURE_AI_ENDPOINT>",
+    "AZURE_AI_MODEL": "<AZURE_AI_MODEL>"
+  }
+}

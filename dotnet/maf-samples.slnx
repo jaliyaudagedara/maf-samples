@@ -40,4 +40,7 @@
   <Project Path="samples/11-agent-to-agent/AgentToAgent.Client/AgentToAgent.Client.csproj" />
   <Project Path="samples/11-agent-to-agent/AgentToAgent/AgentToAgent.csproj" />
   </Folder>
+  <Folder Name="/samples/12-durable-workflow/">
+  <Project Path="samples/12-durable-workflow/DurableWorkflow.csproj" />
+  </Folder>
 </Solution>

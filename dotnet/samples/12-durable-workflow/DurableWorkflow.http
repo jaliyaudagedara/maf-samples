@@ -1,0 +1,20 @@
+@host = http://localhost:7071
+
+### Run the WeekendPlan workflow and wait up to 60 seconds for the result
+# @name startWithWait
+POST {{host}}/api/workflows/WeekendPlan/run?waitForResponse=true&timeoutSeconds=60
+Content-Type: text/plain
+Accept: text/plain
+
+Auckland
+
+### Run it without waiting, the response has the run id
+# @name start
+POST {{host}}/api/workflows/WeekendPlan/run
+Content-Type: text/plain
+
+Auckland
+
+### Check the status of the run started above
+# @name status
+GET {{host}}/api/workflows/WeekendPlan/status/{{start.response.body.$.runId}}
