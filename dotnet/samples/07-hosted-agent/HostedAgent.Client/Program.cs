@@ -4,7 +4,7 @@ using Azure.Identity;
 using OpenAI.Responses;
 
 // ProjectResponsesClient, used to call the agent, is still experimental
-#pragma warning disable OPENAI001
+#pragma warning disable OPENAI001, AAIP002
 
 string endpoint = Environment.GetEnvironmentVariable("AZURE_AI_PROJECT_ENDPOINT")!;
 const string agentName = "weekend-planner";

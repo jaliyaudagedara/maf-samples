@@ -33,7 +33,8 @@ using IHost app = FunctionsApplication
     .CreateBuilder(args)
     .ConfigureFunctionsWebApplication()
     .ConfigureDurableAgents(options =>
-        options.AddAIAgent(agent)
+        // Foundry keeps the conversation, so the durable session needs a stable key for that owner
+        options.AddAIAgent(agent, timeToLive: null, configureHistory: h => h.ProviderKey = new("foundry.v1"))
     )
     .Build();
 

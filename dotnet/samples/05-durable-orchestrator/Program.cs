@@ -51,8 +51,9 @@ using IHost app = FunctionsApplication
     .ConfigureFunctionsWebApplication()
     .ConfigureDurableAgents(options =>
     {
-        options.AddAIAgent(weatherAssessor);
-        options.AddAIAgent(itineraryPlanner);
+        // Foundry keeps the conversation, so the durable session needs a stable key for that owner
+        options.AddAIAgent(weatherAssessor, timeToLive: null, configureHistory: h => h.ProviderKey = new("foundry.v1"));
+        options.AddAIAgent(itineraryPlanner, timeToLive: null, configureHistory: h => h.ProviderKey = new("foundry.v1"));
     })
     .Build();
 
